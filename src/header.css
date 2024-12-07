@@ -1,0 +1,28 @@
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+header h1 {
+    display: inline;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 2em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}

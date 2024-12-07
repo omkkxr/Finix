@@ -1,0 +1,34 @@
+/* Section styles */
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.about, .services, .clients {
+    padding: 2em 0;
+}
+
+.about .info, .services .service-list, .clients .testimonials {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about .info div, .services .service-list div, .clients .testimonials blockquote {
+    flex: 1;
+    margin: 1em;
+}
+
+button.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
