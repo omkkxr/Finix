@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finix Consultancy FZE</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Finix Consultancy </h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#eshop">E-Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Finix Consultancy FZE</h2>
+            <p>Delivering impactful, value-driven services to help businesses thrive.</p>
+            <a href="#services" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Finix Consultancy FZE, we specialize in management consulting, ISO training and certification, IT solutions, and general trading. Founded in 2017 in the UAE, we aim to empower businesses globally.</p>
+            <div class="info">
+                <div>
+                    <h3>Our Vision</h3>
+                    <p>To be a leading provider of innovative and sustainable consultancy services globally.</p>
+                </div>
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>Deliver value-driven solutions for operational efficiency and global compliance.</p>
+                </div>
+                <div>
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>Integrity</li>
+                        <li>Excellence</li>
+                        <li>Customer-Centricity</li>
+                        <li>Collaboration</li>
+                        <li>Sustainability</li>
+                        <li>Continuous Improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div>
+                    <h3>ISO Consultancy</h3>
+                    <p>Expert guidance on achieving ISO certifications.</p>
+                </div>
+                <div>
+                    <h3>ISO Trainings</h3>
+                    <p>Professional ISO standards training programs.</p>
+                </div>
+                <div>
+                    <h3>Business Excellence</h3>
+                    <p>Solutions for operational efficiency and customer satisfaction.</p>
+                </div>
+                <div>
+                    <h3>Product Certification</h3>
+                    <p>Global product certification services for market entry.</p>
+                </div>
+                <div>
+                    <h3>IT Solutions</h3>
+                    <p>Tailored IT solutions to align with business goals.</p>
+                </div>
+                <div>
+                    <h3>General Trading</h3>
+                    <p>High-quality trading services across diverse sectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <h2>Our Clients</h2>
+            <p>We serve leading organizations across various industries in the UAE, India, and beyond.</p>
+            <div class="testimonials">
+                <blockquote>"Finix Consultancy FZE has been instrumental in helping us streamline our operations and achieve ISO certification."</blockquote>
+                <blockquote>"The training programs were engaging and informative. Our team is now better equipped to handle ISO standards."</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p><strong>Contact Us:</strong></p>
+                <p>Address: Creative Tower, P.O. Box 4422, Fujairah, UAE</p>
+                <p>Phone: +971 56 3838311</p>
+                <p>Email: info@finix-consultancy.com</p>
+            </div>
+            <button class="btn feedback-btn" onclick="toggleFeedback()">Feedback / Query</button>
+        </div>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleFeedback()">&times;</span>
+            <h2>Feedback / Query</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Your Phone">
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleFeedback() {
+            const modal = document.getElementById('feedback-modal');
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

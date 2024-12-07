@@ -1,0 +1,416 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background: navy;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: navy;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background: darkblue;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about .info, .services .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    padding: 10px;
+    background: navy;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background: darkblue;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: navy;
+    color: white;
+    position: relative;
+}
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content {
+    text-align: center;
+    position: relative;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+    font-weight: bold;
+}
+
+.modal .close:hover {
+    color: #444;
+}
+
+/* Form Styling */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal form input,
+.modal form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+    border-color: navy;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 128, 0.4);
+}
+
+.modal form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.modal form button {
+    padding: 12px;
+    background: navy;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal form button:hover {
+    background: darkblue;
+}
+
+/* Feedback Button */
+.feedback-btn {
+    padding: 12px 20px;
+    background: white;
+    color: navy;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid navy;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback-btn:hover {
+    background: navy;
+    color: white;
+}
+/* Services Section */
+.services {
+    background: #f9f9f9;
+    padding: 50px 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-list div {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-list div h3 {
+    color: navy;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.service-list div p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.service-list div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Our Customers Section */
+.customers {
+    background: white;
+    padding: 50px 0;
+}
+
+.customers h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.customers p {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonials blockquote {
+    background: #f0f0f0;
+    border-left: 5px solid navy;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #444;
+    border-radius: 5px;
+    position: relative;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.testimonials blockquote:hover {
+    background: #e8e8e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials blockquote:before {
+    content: "“";
+    font-size: 3rem;
+    color: navy;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-family: Georgia, serif;
+}
+
+.testimonials blockquote:after {
+    content: "”";
+    font-size: 3rem;
+    color: navy;
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    font-family: Georgia, serif;
+}
+/* About Us Section */
+.about {
+    background: #f0f8ff; /* Light blue background */
+    padding: 50px 0;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.about p {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+}
+
+.about .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+}
+
+.about .info div {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about .info div h3 {
+    color: navy;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.about .info div p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.about .info div ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.about .info div ul li {
+    margin: 5px 0;
+}
+
+.about .info div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlighting Mission and Vision */
+.about .info div h3:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: navy;
+    margin: 10px auto 0 auto;
+}
