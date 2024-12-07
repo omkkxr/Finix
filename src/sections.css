@@ -1,0 +1,141 @@
+/* Clients Section */
+.clients {
+    background: #f9f9f9;
+    padding: 50px 0;
+}
+
+.clients h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.clients p {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Testimonials */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonials blockquote {
+    background: white;
+    border-left: 5px solid navy;
+    padding: 20px 25px;
+    font-style: italic;
+    color: #444;
+    border-radius: 10px;
+    position: relative;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.testimonials blockquote:hover {
+    background: #e8e8e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials blockquote:before {
+    content: "“";
+    font-size: 3rem;
+    color: navy;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-family: Georgia, serif;
+}
+
+.testimonials blockquote:after {
+    content: "”";
+    font-size: 3rem;
+    color: navy;
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    font-family: Georgia, serif;
+}
+/* Hero Section */
+.hero {
+    background: #f0f8ff; /* Light blue */
+    color: navy;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+/* About Us Section */
+.about {
+    background: white;
+    padding: 50px 0;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+.about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about .info div {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about .info div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about .info div h3 {
+    color: navy;
+    margin-bottom: 10px;
+}
+
+.about .info div ul {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.about .info div ul li {
+    margin: 5px 0;
+}

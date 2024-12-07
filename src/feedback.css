@@ -1,0 +1,75 @@
+/* Feedback Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content {
+    text-align: center;
+    position: relative;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: navy;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: gray;
+    font-weight: bold;
+}
+
+.modal form input,
+.modal form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+    border-color: navy;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 128, 0.4);
+}
+
+.modal form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.modal form button {
+    padding: 12px;
+    background: navy;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal form button:hover {
+    background: darkblue;
+}

@@ -1,0 +1,29 @@
+/* Footer */
+footer {
+    background: navy;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.feedback-btn {
+    background: white;
+    color: navy;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback-btn:hover {
+    background: navy;
+    color: white;
+}
