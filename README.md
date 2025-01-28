@@ -1,4 +1,4 @@
-** Technologies Used: HTML, CSS, JavaScript
+ Technologies Used: HTML, CSS, JavaScript
 
  
  --> Developed a website to showcase the services and
@@ -10,4 +10,4 @@
  			user experience and accessibility.
 
 
---> Link: https://omkkxr.github.io/Finix**
+--> Link: https://omkkxr.github.io/Finix
