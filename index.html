@@ -13,6 +13,7 @@
     <link rel="icon" href="public/images/favicon.png" type="image/png">
     <script src="public/script/scroll.js"></script>
     <script src="public/script/slider.js"></script>
+    <script src="public/script/mobileMenu.js"></script>
     <style>
         .float-animation {
             animation: float 15s ease-in-out infinite;
@@ -93,7 +94,7 @@
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
                     <div class="text-2xl font-bold text-blue-600">
-                        Finix Consultancy
+                        <a href="">Finix Consultancy</a>
                     </div>
                 </div>
 
@@ -121,14 +122,75 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden pb-4">
-                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
-                <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About Us</a>
-                <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
-                <a href="#testimonials" class="block py-2 text-gray-700 hover:text-blue-600">Testimonials</a>
-                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact Us</a>
+            <div id="mobile-menu"
+                class="hidden md:hidden fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity duration-300"
+                aria-hidden="true">
+                <div
+                    class="absolute top-0 left-0 right-0 bg-white shadow-lg transform transition-all duration-300 ease-out -translate-y-full">
+                    <!-- Logo + Close Button Row -->
+                    <div class="flex justify-between items-center p-4 border-b">
+                        <!-- Your Logo Here -->
+                        <img src="public/images/logo.png" alt="Finix Consultancy" class="h-10">
+                        <button id="close-menu-button" class="p-2 text-gray-500 hover:text-gray-700"
+                            aria-label="Close menu">
+                            ✕
+                        </button>
+                    </div>
+
+                    <!-- Menu Links -->
+                    <nav class="p-4 space-y-4">
+                        <a href="#home"
+                            class="mobile-link block text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+                        <a href="#about"
+                            class="mobile-link block text-gray-700 hover:text-blue-600 transition-colors font-medium">About
+                            Us</a>
+                        <a href="#services"
+                            class="mobile-link block text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
+                        <a href="#testimonials"
+                            class="mobile-link block text-gray-700 hover:text-blue-600 transition-colors font-medium">Testimonials</a>
+                        <a href="#contact"
+                            class="mobile-link block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md transition-colors font-medium text-center">Contact
+                            Us</a>
+                    </nav>
+                </div>
             </div>
-        </div>
+
+            <script>
+                const menuButton = document.getElementById('mobile-menu-button');
+                const closeButton = document.getElementById('close-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuContent = mobileMenu.querySelector('div > div'); // Inner container for animation
+                const mobileLinks = document.querySelectorAll('.mobile-link');
+
+                function toggleMenu() {
+                    const isOpen = mobileMenu.classList.toggle('hidden');
+                    menuButton.setAttribute('aria-expanded', !isOpen);
+                    mobileMenu.setAttribute('aria-hidden', isOpen);
+
+                    // Animation control
+                    if (isOpen) {
+                        menuContent.classList.add('-translate-y-full');
+                        menuContent.classList.remove('translate-y-0');
+                    } else {
+                        menuContent.classList.remove('-translate-y-full');
+                        menuContent.classList.add('translate-y-0');
+                    }
+                }
+
+                // Toggle menu when clicking buttons
+                menuButton.addEventListener('click', toggleMenu);
+                closeButton.addEventListener('click', toggleMenu);
+
+                // Close menu when clicking links
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', toggleMenu);
+                });
+
+                // Close when clicking outside menu
+                mobileMenu.addEventListener('click', (e) => {
+                    if (e.target === mobileMenu) toggleMenu();
+                });
+            </script>
     </header>
 
     <!-- Hero Section -->
